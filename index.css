@@ -1,0 +1,128 @@
+body {
+    margin: 0;
+    line-height: normal;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #ffe953;
+}
+
+.header {
+    background-color: #222430;
+    height: max-content;
+    padding: 25px;
+    border-radius: 0 0 25px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-content {
+    display: flex;
+    width: max-content;
+    padding: 25px;
+    justify-content: center;
+    align-items: center;
+    max-height: 100%;
+    border-radius: 25px;
+    background-color: #333540;
+    color: white;
+}
+
+#text-header {
+    font-size: 2.5rem;
+}
+
+.group-icon, .d-icon {
+    max-height: 100%;
+    max-width: 100%;
+    margin-left: .2in;
+}
+
+.chat-container {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer {
+    height: 100px;
+    border-radius: 25px 25px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.message-input {
+    width: 80%;
+    padding: 20px;
+    border-radius: 40px;
+    border: none;
+    font-size: 18px;
+}
+
+.message {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    position: relative;
+    width: auto;
+    height: auto;
+}
+
+.message.sent {
+    align-self: flex-end;
+    margin-right: 10%;
+}
+
+.message.received {
+    align-self: flex-start;
+    margin-left: 10%;
+}
+
+.message-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    height: auto;
+    border-radius: 25px;
+    padding: 10px 20px;
+    word-wrap: break-word;
+    position: relative;
+    font-size: 20px;
+}
+
+.message.sent .message-content {
+    background-color: rgba(110, 0, 255, 1);
+    color: #fff;
+}
+
+.message.received .message-content {
+    background-color: #fff;
+    color: #000;
+}
+
+.icon-bubble {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -2px;
+}
+
+.sent-bubble {
+    background-color: rgba(110, 0, 255, 1);
+    right: -15px;
+}
+
+.received-bubble {
+    background-color: #fff;
+    left: -15px;
+}
