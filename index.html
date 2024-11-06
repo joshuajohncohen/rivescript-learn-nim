@@ -5,10 +5,12 @@
     <meta name="viewport" content="initial-scale=1, width=device-width">
     <link rel="stylesheet" href="./index.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" />
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/@jitbit/htmlsanitizer@latest/HtmlSanitizer.js"></script>
+    <script src="https://unpkg.com/rivescript@latest/dist/rivescript.min.js"></script>
     <script src="./index.js"></script>
 </head>
-<body>
+<body onload="init()">
     <div class="container">
         <header class="header">
             <div class="header-content">
@@ -17,25 +19,10 @@
             </div>
         </header>
         <main class="chat-container">
-            <div class="message received">
-                <div class="message-content">Hi!</div>
-                <div class="icon-bubble received-bubble"></div>
-            </div>
-            <div class="message sent">
-                <div class="message-content">Hello!</div>
-                <div class="icon-bubble sent-bubble"></div>
-            </div>
-            <div class="message received">
-                <div class="message-content">How are you?</div>
-                <div class="icon-bubble received-bubble"></div>
-            </div>
-            <div class="message sent">
-                <div class="message-content">I'm good, thanks!</div>
-                <div class="icon-bubble sent-bubble"></div>
-            </div>
         </main>
         <footer class="footer">
-            <input type="text" class="message-input" placeholder="Type your message here...">
+            <input type="text" class="message-input" placeholder="Type your message here..." onkeyup="keyUp(event)">
+            <button class="clear-button" onclick="clearChat()">Clear</button>
         </footer>
     </div>
 </body>

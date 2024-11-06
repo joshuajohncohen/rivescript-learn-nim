@@ -1,0 +1,35 @@
+# Guessing game
+
+import random # This is like #include <random.h>
+
+const min = 1
+const max = 100
+const maxGuesses = 10
+let targetNumber = randint(min, max)
+
+echo "I will think of a number between " & $min & " and " & $max & ". Try to guess it! You have " & $maxGuesses & " tries."  # echo is equivalent to Serial.println("Think of a number..."), also in nim u use & to join strings instead of +, plus is just for numbers. also the $variable syntax is a shorthand for turning a variable into a string so you can concatanate it to a string.
+
+var guessedSuccessfully = false
+
+proc getGuess(prompt: string = "Enter a guess: "): int =
+  stdin.write prompt
+  return stdin.readLine.parseInt
+
+for _ in 1...maxGuesses:
+  # Ask the user for their guess
+  var guess: int = getGuess()
+  
+  # Check if the guess is too high or too low
+  if guess > targetNumber:
+    echo "Too high! Try again."  # self explanatory
+  elif guess < targetNumber:
+    echo "Too low! Try again."  # also self explanatory
+  else:
+    echo "Good job!"  # self explanatory
+    guessedSuccessfully = true
+    break  # similar to return; or exit(); in C++
+
+if !guessedSuccessfully:
+  echo "You ran out of guesses. Better luck next time!"
+
+echo fmt"The target number was ${targetNumber}. Thanks for playing!"  # equivalent to Serial.println("The target..."); in C++

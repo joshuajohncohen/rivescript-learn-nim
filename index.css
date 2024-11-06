@@ -49,6 +49,7 @@ body {
     overflow-y: auto;
     display: flex;
     flex-direction: column;
+    perspective: 1000px;
 }
 
 .footer {
@@ -74,6 +75,9 @@ body {
     position: relative;
     width: auto;
     height: auto;
+    animation: slideIn 0.3s ease;
+    will-change: transform, opacity;
+    max-width: 52.125rem;
 }
 
 .message.sent {
@@ -125,4 +129,44 @@ body {
 .received-bubble {
     background-color: #fff;
     left: -15px;
+}
+
+.clear-button {
+    margin-left: 20px;
+    padding: 15px 30px;
+    border-radius: 20px;
+    border: none;
+    background-color: #222430;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.clear-button:hover {
+    background-color: #333540;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+code {
+    background-color: #272822;
+    color: #f8f8f2;
+    border-radius: 0.3em;
+    padding: 4px 5px 4px;
+    margin: 0 0.5rem 0;
+    font-size: 17px;
+    display: inline-block;
+    white-space: pre-wrap;
+    word-wrap: break-word;
 }

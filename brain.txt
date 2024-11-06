@@ -1,0 +1,71 @@
+// RiveScript
+
++ no
+- 🙁 thats too bad, come back when u feel like learning nim
+
++ (k|ok|im back|i am back|okay|yes|yeah|got it|i got it|sure|i think so|hope so|i hope so|think so|hopefully|ready|im ready|im ready now)
+% thats too bad come back when u feel like learning nim
+- So you're ready to learn Nim now?
+
++ (yes|yeah|ok|got it|i got it|sure|okay|i think so|hope so|i hope so|think so|hopefully|done)
+% so youre ready to learn nim now
+@ yes
+
++ js
+% cool what programming language are you coming from arduino python or javascript
+- <set lang=javascript>Cool! Wanna get started?
+
++ (arduino|python|javascript)
+% cool what programming language are you coming from arduino python or javascript
+- <set lang=<star1>> Cool! Wanna get started?
+
++ (yes|yeah|ok|got it|i got it|sure|okay|i think so|hope so|i hope so|think so|hopefully|k|done)
+% cool wanna get started
+- Okay! We will be making a guessing game. WRITE A SANDBOX SCRIPT HERE, SAY TO SAY OK WHEN U DID THE STUFF
+
++ (yes|yeah|ok|got it|i got it|sure|okay|i think so|hope so|i hope so|think so|hopefully|k|understood|done)
+% okay we will be making a guessing game write a sandbox script here say to say ok when u did the stuff
+- To begin, write the line <code>import random</code> at the top of your code. This imports the <code>random</code> library, which deals with generating random numbers. Got it?
+
++ (yes|yeah|ok|got it|i got it|sure|okay|i think so|hope so|i hope so|think so|hopefully|k|done)
+% to begin write the line codeimport randomcode at the top of your code this imports the coderandomcode library which deals with generating random numbers got it
+* <get lang> == arduino => This is similar to the statement <code>#include &lt;random.h&gt;</code> in Arduino. However, there is one small difference. In Arduino, when you import, for example, Serial, all the functions it has have to be prefixed with <code>Serial.</code> like <code>Serial.println</code>. In Nim, this is not the case by default. Got it?
+* <get lang> == javascript => Now let's talk about variables. In Nim, there are three types of variables. Ones defined with <code>var</code>, ones defined with <code>let</code>, and ones defined with <code>const</code>. <code>var</code> just defines normal variables. <code>let</code> defines immutable (unchangeable) variables whose values can be generated dynamically (like a random number or user input). <code>const</code> is for immutable variables that are not dynamic. They are always the same unless you edit the code. They cannot be defined dynamically based on things like user input or random numbers. Got it?
+* <get lang> == python => This is basically the same as the same statement in Python. However, in Nim, you do not need to prefix imported methods and functions with the name of the module by default like you do in Python. <code>import &lt;module&gt;</code> in Nim is equivalent to <code>from &lt;module&gt; import *</code> in Python. Got it?
+
++ (yes|yeah|ok|got it|i got it|sure|okay|i think so|hope so|i hope so|think so|hopefully|k|done)
+% this is basically the same as the same statement in python however in nim you do not need to prefix imported methods and functions with the name of the module by default like you do in python codeimport ltmodulegtcode in nim is equivalent to codefrom ltmodulegt import code in python got it
+- Now let's talk about variables. In Nim, there are three types of variables. Ones defined with <code>var</code>, ones defined with <code>let</code>, and ones defined with <code>const</code>. <code>var</code> just defines normal variables. <code>let</code> defines immutable (unchangeable) variables whose values can be generated dynamically (like a random number or user input). <code>const</code> is for immutable variables that are not dynamic. They are always the same unless you edit the code. They cannot be defined dynamically based on things like user input or random numbers. Got it?
+
++ (yes|yeah|ok|got it|i got it|sure|okay|i think so|hope so|i hope so|think so|hopefully|k|done)
+% this is similar to the statement codeinclude ltrandomhgtcode in arduino however there is one small difference in arduino when you import for example serial all the functions it has have to be prefixed with codeserialcode like codeserialprintlncode in nim this is not the case by default got it
+- Now let's talk about variables. In Nim, there are three types of variables. Ones defined with <code>var</code>, ones defined with <code>let</code>, and ones defined with <code>const</code>. <code>var</code> just defines normal variables. <code>let</code> defines immutable (unchangeable) variables whose values can be generated dynamically (like a random number or user input). <code>const</code> is for immutable variables that are not dynamic. They are always the same unless you edit the code. They cannot be defined dynamically based on things like user input or random numbers. Got it?
+
++ (yes|yeah|ok|got it|i got it|sure|okay|i think so|hope so|i hope so|think so|hopefully|k|done)
+% now lets talk about variables in nim there are three types of variables ones defined with codevarcode ones defined with codeletcode and ones defined with codeconstcode codevarcode just defines normal variables codeletcode defines immutable unchangeable variables whose values can be generated dynamically like a random number or user input codeconstcode is for immutable variables that are not dynamic they are always the same unless you edit the code they cannot be defined dynamically based on things like user input or random numbers got it
+* <get lang> == python => Good. Now write the following lines in your code:\n
+^ <code>const min = 1\n
+^ const max = 100\n
+^ const maxGuesses = 10\n
+^ let targetNumber = randint(min, max)</code>.\n
+^ This code sets up some variables for our guessing game and selects a random number as the target.\n
+^ Note how we use <code>randint()</code> instead of <code>random.randint</code>. In Nim, if you use <code>import &lt;module&gt;</code>, then either way will work, but you still rarely have to use the more specific way.\n
+^ Nim will try to disambiguate function calls by checking the types of the parameters being passed to and returned by a function if it doesn't know which module's function is being called. Because of this, using the <code>module.function()</code> syntax is only necessary when two functions have the same name, argument types, and return type.
+
+- Good. Now write the following lines in your code:\n
+^ <code>const min = 1\n
+^ const max = 100\n
+^ const maxGuesses = 10\n
+^ let targetNumber = randint(min, max)</code>.\n
+^ This code sets up some variables for our guessing game and selects a random number as the target. Okay?
+
++ (yes|yeah|ok|got it|i got it|sure|okay|i think so|hope so|i hope so|think so|hopefully|k|done)
+% good now write the following lines in your codecodeconst min 1const max 100const maxguesses 10let targetnumber randintmin maxcodethis code sets up some variables for our guessing game and selects a random number as the targetnote how we use coderandintcode instead of coderandomrandintcode in nim if you use codeimport ltmodulegtcode then either way will work but you still rarely have to use the more specific waynim will try to disambiguate function calls by checking the types of the parameters being passed to and returned by a function if it doesnt know which modules function is being called because of this using the codemodulefunctioncode syntax is only necessary when two functions have the same name argument types and return type
+- OK. Now we will talk about 
+
++ (yes|yeah|ok|got it|i got it|sure|okay|i think so|hope so|i hope so|think so|hopefully|k|done)
+% good now write the following lines in your codecodeconst min 1const max 100const maxguesses 10let targetnumber randintmin maxcodethis code sets up some variables for our guessing game and selects a random number as the target okay
+- 
+
++ (yes|yeah|sure|guess so|i guess so|i guess|definitely|for sure|certainly|most certainly|i would|i certainly would|i most certainly would|why not)
+- Cool! What programming language are you coming from? Arduino, Python, or JavaScript?
