@@ -12,7 +12,7 @@ echo "I will think of a number between " & $min & " and " & $max & ". Try to gue
 var guessedSuccessfully = false
 
 proc getGuess(prompt: string = "Enter a guess: "): int =
-  stdin.write prompt
+  stdout.write prompt
   return stdin.readLine.parseInt
 
 for _ in 1...maxGuesses:
@@ -21,15 +21,15 @@ for _ in 1...maxGuesses:
   
   # Check if the guess is too high or too low
   if guess > targetNumber:
-    echo "Too high! Try again."  # self explanatory
+    echo "Too high! Try again."
   elif guess < targetNumber:
-    echo "Too low! Try again."  # also self explanatory
+    echo "Too low! Try again."
   else:
-    echo "Good job!"  # self explanatory
+    echo "Good job!"
     guessedSuccessfully = true
-    break  # similar to return; or exit(); in C++
+    break
 
-if !guessedSuccessfully:
+if not guessedSuccessfully:
   echo "You ran out of guesses. Better luck next time!"
 
 echo fmt"The target number was ${targetNumber}. Thanks for playing!"  # equivalent to Serial.println("The target..."); in C++

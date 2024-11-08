@@ -3,11 +3,11 @@
 + no
 - 🙁 thats too bad, come back when u feel like learning nim
 
-+ (k|ok|im back|i am back|okay|yes|yeah|got it|i got it|sure|i think so|hope so|i hope so|think so|hopefully|ready|im ready|im ready now)
++ (k|ok|im back|i am back|okay|yes|yeah|got it|i got it|sure|i think so|hope so|i hope so|think so|hopefully|ready|im ready|im ready now|ok im ready)
 % thats too bad come back when u feel like learning nim
 - So you're ready to learn Nim now?
 
-+ (yes|yeah|ok|got it|i got it|sure|okay|i think so|hope so|i hope so|think so|hopefully|done)
++ (yes|yeah|ok|got it|i got it|sure|okay|i think so|hope so|i hope so|think so|hopefully|done|y)
 % so youre ready to learn nim now
 @ yes
 
@@ -19,53 +19,139 @@
 % cool what programming language are you coming from arduino python or javascript
 - <set lang=<star1>> Cool! Wanna get started?
 
-+ (yes|yeah|ok|got it|i got it|sure|okay|i think so|hope so|i hope so|think so|hopefully|k|done)
++ (yes|yeah|ok|got it|i got it|sure|okay|i think so|hope so|i hope so|think so|hopefully|k|done|y)
 % cool wanna get started
-- Okay! We will be making a guessing game. WRITE A SANDBOX SCRIPT HERE, SAY TO SAY OK WHEN U DID THE STUFF
+- Okay! We will be making a guessing game. You should note that this tutorial assumes you already have Nim set up and installed. OK?
 
 + (yes|yeah|ok|got it|i got it|sure|okay|i think so|hope so|i hope so|think so|hopefully|k|understood|done)
-% okay we will be making a guessing game write a sandbox script here say to say ok when u did the stuff
+% okay we will be making a guessing game you should note that this tutorial assumes you already have nim set up and installed ok
 - To begin, write the line <code>import random</code> at the top of your code. This imports the <code>random</code> library, which deals with generating random numbers. Got it?
 
-+ (yes|yeah|ok|got it|i got it|sure|okay|i think so|hope so|i hope so|think so|hopefully|k|done)
++ (yes|yeah|ok|got it|i got it|sure|okay|i think so|hope so|i hope so|think so|hopefully|k|done|y)
 % to begin write the line codeimport randomcode at the top of your code this imports the coderandomcode library which deals with generating random numbers got it
 * <get lang> == arduino => This is similar to the statement <code>#include &lt;random.h&gt;</code> in Arduino. However, there is one small difference. In Arduino, when you import, for example, Serial, all the functions it has have to be prefixed with <code>Serial.</code> like <code>Serial.println</code>. In Nim, this is not the case by default. Got it?
 * <get lang> == javascript => Now let's talk about variables. In Nim, there are three types of variables. Ones defined with <code>var</code>, ones defined with <code>let</code>, and ones defined with <code>const</code>. <code>var</code> just defines normal variables. <code>let</code> defines immutable (unchangeable) variables whose values can be generated dynamically (like a random number or user input). <code>const</code> is for immutable variables that are not dynamic. They are always the same unless you edit the code. They cannot be defined dynamically based on things like user input or random numbers. Got it?
 * <get lang> == python => This is basically the same as the same statement in Python. However, in Nim, you do not need to prefix imported methods and functions with the name of the module by default like you do in Python. <code>import &lt;module&gt;</code> in Nim is equivalent to <code>from &lt;module&gt; import *</code> in Python. Got it?
 
-+ (yes|yeah|ok|got it|i got it|sure|okay|i think so|hope so|i hope so|think so|hopefully|k|done)
++ (yes|yeah|ok|got it|i got it|sure|okay|i think so|hope so|i hope so|think so|hopefully|k|done|y)
 % this is basically the same as the same statement in python however in nim you do not need to prefix imported methods and functions with the name of the module by default like you do in python codeimport ltmodulegtcode in nim is equivalent to codefrom ltmodulegt import code in python got it
 - Now let's talk about variables. In Nim, there are three types of variables. Ones defined with <code>var</code>, ones defined with <code>let</code>, and ones defined with <code>const</code>. <code>var</code> just defines normal variables. <code>let</code> defines immutable (unchangeable) variables whose values can be generated dynamically (like a random number or user input). <code>const</code> is for immutable variables that are not dynamic. They are always the same unless you edit the code. They cannot be defined dynamically based on things like user input or random numbers. Got it?
 
-+ (yes|yeah|ok|got it|i got it|sure|okay|i think so|hope so|i hope so|think so|hopefully|k|done)
++ (yes|yeah|ok|got it|i got it|sure|okay|i think so|hope so|i hope so|think so|hopefully|k|done|y)
 % this is similar to the statement codeinclude ltrandomhgtcode in arduino however there is one small difference in arduino when you import for example serial all the functions it has have to be prefixed with codeserialcode like codeserialprintlncode in nim this is not the case by default got it
 - Now let's talk about variables. In Nim, there are three types of variables. Ones defined with <code>var</code>, ones defined with <code>let</code>, and ones defined with <code>const</code>. <code>var</code> just defines normal variables. <code>let</code> defines immutable (unchangeable) variables whose values can be generated dynamically (like a random number or user input). <code>const</code> is for immutable variables that are not dynamic. They are always the same unless you edit the code. They cannot be defined dynamically based on things like user input or random numbers. Got it?
 
-+ (yes|yeah|ok|got it|i got it|sure|okay|i think so|hope so|i hope so|think so|hopefully|k|done)
++ (yes|yeah|ok|got it|i got it|sure|okay|i think so|hope so|i hope so|think so|hopefully|k|done|y)
 % now lets talk about variables in nim there are three types of variables ones defined with codevarcode ones defined with codeletcode and ones defined with codeconstcode codevarcode just defines normal variables codeletcode defines immutable unchangeable variables whose values can be generated dynamically like a random number or user input codeconstcode is for immutable variables that are not dynamic they are always the same unless you edit the code they cannot be defined dynamically based on things like user input or random numbers got it
-* <get lang> == python => Good. Now write the following lines in your code:\n
-^ <code>const min = 1\n
+* <get lang> == python => Good. Now write the following lines in your code:<br>
+^ <pre><code>const min = 1\n
 ^ const max = 100\n
 ^ const maxGuesses = 10\n
-^ let targetNumber = randint(min, max)</code>.\n
+^ let targetNumber = randint(min, max)</code></pre><br>
 ^ This code sets up some variables for our guessing game and selects a random number as the target.\n
 ^ Note how we use <code>randint()</code> instead of <code>random.randint</code>. In Nim, if you use <code>import &lt;module&gt;</code>, then either way will work, but you still rarely have to use the more specific way.\n
 ^ Nim will try to disambiguate function calls by checking the types of the parameters being passed to and returned by a function if it doesn't know which module's function is being called. Because of this, using the <code>module.function()</code> syntax is only necessary when two functions have the same name, argument types, and return type.
 
-- Good. Now write the following lines in your code:\n
-^ <code>const min = 1\n
+- Good. Now write the following lines in your code:<br>
+^ <pre><code>const min = 1\n
 ^ const max = 100\n
 ^ const maxGuesses = 10\n
-^ let targetNumber = randint(min, max)</code>.\n
+^ let targetNumber = randint(min, max)</code></pre><br>
 ^ This code sets up some variables for our guessing game and selects a random number as the target. Okay?
 
-+ (yes|yeah|ok|got it|i got it|sure|okay|i think so|hope so|i hope so|think so|hopefully|k|done)
-% good now write the following lines in your codecodeconst min 1const max 100const maxguesses 10let targetnumber randintmin maxcodethis code sets up some variables for our guessing game and selects a random number as the targetnote how we use coderandintcode instead of coderandomrandintcode in nim if you use codeimport ltmodulegtcode then either way will work but you still rarely have to use the more specific waynim will try to disambiguate function calls by checking the types of the parameters being passed to and returned by a function if it doesnt know which modules function is being called because of this using the codemodulefunctioncode syntax is only necessary when two functions have the same name argument types and return type
-- OK. Now we will talk about 
++ (yes|yeah|ok|got it|i got it|sure|okay|i think so|hope so|i hope so|think so|hopefully|k|done|y)
+% good now write the following lines in your codebrprecodeconst min 1const max 100const maxguesses 10let targetnumber randintmin maxcodeprebrthis code sets up some variables for our guessing game and selects a random number as the target okay
+* <get lang> == javascript => OK. Now we will talk about outputting strings. Add the following line of code to your program:<br>
+^ <pre><code>echo "I will think of a number between " & $min & " and " & $max & ". Try to guess it! You have " & $maxGuesses & " tries."</code></pre><br>
+^ Let's unpack what this line means. First of all, <code>echo</code> is similar to <code>console.log</code>. It outputs a line of text.<br>
+^ There are also the & and $ symbols. In Nim, the & symbol is used instead of the + to concatanate strings. The $ symbol is used to convert data into a string, in this case so we can concatanate it to a string.
+- OK. Now we will talk about outputting strings. Add the following line of code to your program:<br>
+^ <pre><code>echo "I will think of a number between " & $min & " and " & $max & ". Try to guess it! You have " & $maxGuesses & " tries."</code></pre><br>
+^ Let's unpack what this line means. First of all, <code>echo</code> is similar to <code>Serial.println</code>. It outputs a string with an appended newline at the end. We will talk later about how to output text without a newline at the end.<br>
+^ There are also the & and $ symbols. In Nim, the & symbol is used instead of the + to concatanate strings. The $ symbol is used to convert data into a string, in this case so we can concatanate it to a string.
 
-+ (yes|yeah|ok|got it|i got it|sure|okay|i think so|hope so|i hope so|think so|hopefully|k|done)
-% good now write the following lines in your codecodeconst min 1const max 100const maxguesses 10let targetnumber randintmin maxcodethis code sets up some variables for our guessing game and selects a random number as the target okay
-- 
++ (yes|yeah|ok|got it|i got it|sure|okay|i think so|hope so|i hope so|think so|hopefully|k|done|y)
+% good now write the following lines in your codebrprecodeconst min 1const max 100const maxguesses 10let targetnumber randintmin maxcodeprebrthis code sets up some variables for our guessing game and selects a random number as the targetnote how we use coderandintcode instead of coderandomrandintcode in nim if you use codeimport ltmodulegtcode then either way will work but you still rarely have to use the more specific waynim will try to disambiguate function calls by checking the types of the parameters being passed to and returned by a function if it doesnt know which modules function is being called because of this using the codemodulefunctioncode syntax is only necessary when two functions have the same name argument types and return type
+- OK. Now we will talk about outputting strings. Add the following line of code to your program:<br>
+^ <pre><code>echo "I will think of a number between " & $min & " and " & $max & ". Try to guess it! You have " & $maxGuesses & " tries."</code></pre><br>
+^ Let's unpack what this line means. First of all, <code>echo</code> is similar to <code>print</code>. It outputs a line of text.<br>
+^ There are also the & and $ symbols. In Nim, the & symbol is used instead of the + to concatanate strings. The $ symbol is used to convert data into a string, in this case so we can concatanate it to a string.
 
-+ (yes|yeah|sure|guess so|i guess so|i guess|definitely|for sure|certainly|most certainly|i would|i certainly would|i most certainly would|why not)
++ (yes|yeah|ok|got it|i got it|sure|okay|i think so|hope so|i hope so|think so|hopefully|k|done|y)
+% ok now we will talk about outputting strings add the following line of code to your programbrprecodeecho i will think of a number between min and max try to guess it you have maxguesses triescodeprebrlets unpack what this line means first of all codeechocode is similar to codeserialprintlncode it outputs a string with an appended newline at the end we will talk later about how to output text without a newline at the endbrthere are also the and symbols in nim the symbol is used instead of the to concatanate strings the symbol is used to convert data into a string in this case so we can concatanate it to a string
+- OK, now write the line: <code>var guessedSuccessfully = false</code>
+
++ (yes|yeah|ok|got it|i got it|sure|okay|i think so|hope so|i hope so|think so|hopefully|k|done|y)
+% ok now we will talk about outputting strings add the following line of code to your programbrprecodeecho i will think of a number between min and max try to guess it you have maxguesses triescodeprebrlets unpack what this line means first of all codeechocode is similar to codeconsolelogcode it outputs a line of textbrthere are also the and symbols in nim the symbol is used instead of the to concatanate strings the symbol is used to convert data into a string in this case so we can concatanate it to a string
+- OK, now write the line: <code>var guessedSuccessfully = false</code>
+
++ (yes|yeah|ok|got it|i got it|sure|okay|i think so|hope so|i hope so|think so|hopefully|k|done|y)
+% ok now we will talk about outputting strings add the following line of code to your programbrprecodeecho i will think of a number between min and max try to guess it you have maxguesses triescodeprebrlets unpack what this line means first of all codeechocode is similar to codeprintcode it outputs a line of textbrthere are also the and symbols in nim the symbol is used instead of the to concatanate strings the symbol is used to convert data into a string in this case so we can concatanate it to a string
+- OK, now write the line: <code>var guessedSuccessfully = false</code>. In Nim, booleans are not capitalized.
+
++ (yes|yeah|ok|got it|i got it|sure|okay|i think so|hope so|i hope so|think so|hopefully|k|done|y)
+% ok now write the line codevar guessedsuccessfully falsecode
+- In Nim, what are normally called functions or methods are called procedures. They are defined using this syntax: <code>proc name(arg1: type = default): returnType =</code><br>
+^ Note how instead of a <code>:</code> Nim uses <code>=</code> for procedures. Got it?
+
++ (yes|yeah|ok|got it|i got it|sure|okay|i think so|hope so|i hope so|think so|hopefully|k|done|y)
+% ok now write the line codevar guessedsuccessfully falsecode in nim booleans are not capitalized
+- In Nim, what are normally called functions or methods are called procedures. They are defined using this syntax: <code>proc name(arg1: type = default): returnType =</code><br>
+^ Note how instead of a <code>:</code> Nim uses <code>=</code> for procedures. Got it?
+
++ (yes|yeah|ok|got it|i got it|sure|okay|i think so|hope so|i hope so|think so|hopefully|k|done|y)
+% in nim what are normally called functions or methods are called procedures they are defined using this syntax codeproc namearg1 type default returntype codebrnote how instead of a codecode nim uses codecode for procedures got it
+- OK. Now add this to your program:<br>
+^ <pre><code>proc getGuess(prompt: string = "Enter a guess: "): int =<br>
+^   stdout.write prompt<br>
+^   return stdin.readLine.parseInt</code></pre><br>
+^ This defines a procedure to get a guess from the user. It uses a few new procedures. First, it uses <code>stdout.write</code>. <code>stdout</code> stands for STandarD OUTput. <code>stdout.write</code> outputs text without adding a newline to the end of it. There is also <code>stdin.readLine.parseInt</code>. <code>stdin.readLine</code> reads a line of input from the "STandarD INput." <code>.parseInt</code> turns it into an integer. We will talk later about the lack of parentheses.
+
++ (yes|yeah|ok|got it|i got it|sure|okay|i think so|hope so|i hope so|think so|hopefully|k|done|y)
+% ok now add this to your programbrprecodeproc getguessprompt string enter a guess int brstdoutwrite promptbrreturn stdinreadlineparseintcodeprebrthis defines a procedure to get a guess from the user it uses a few new procedures first it uses codestdoutwritecode codestdoutcode stands for standard output codestdoutwritecode outputs text without adding a newline to the end of it there is also codestdinreadlineparseintcode codestdinreadlinecode reads a line of input from the standard input codeparseintcode turns it into an integer we will talk later about the lack of parentheses
+* <get lang> == python => Now we will write the main game loop of asking the user for a guess and responding with whether it is too high or too low or correct.<br>
+^ Write the following code and on the next line start an indented block: <code>for _ in 1...maxGuesses:</code>. You may be wondering about this line. What do the <code>1...maxGuesses</code> and <code>for _ in ...</code> parts mean? Let's start with the <code>1...maxGuesses</code> part. In Nim, instead of using the unintuitive range function to generate a range of numbers, we use the <code>...</code> operator. It gives the inclusive range of integers between two numbers. You can also use <code>..&lt;</code> for inclusive-lower bound / exclusive upper bound, or <code>..&gt;</code> for the opposite. If you want to customize the step, use the countup or countdown procedures instead. They each take a start, an end, and a step.<br>
+^ Now we will talk about the strange _ in place of an index variable. In Nim, if you do not want or need to use the index variable in a for ... in loop, you can write an _ for the variable and Nim will not define a variable for it.
+
+- Now we will write the main game loop of asking the user for a guess and responding with whether it is too high or too low or correct.<br>
+^ Write the following code and on the next line start an indented block: <code>for _ in 1...maxGuesses:</code>. You may be wondering about this line. What do the <code>1...maxGuesses</code> and <code>for _ in ...</code> parts mean? Let's start with the <code>1...maxGuesses</code> part. In Nim, we use the <code>...</code> operator to get a range of numbers. It gives the inclusive range of integers between two numbers. You can also use <code>..&lt;</code> for inclusive-lower bound / exclusive upper bound, or <code>..&gt;</code> for the opposite. If you want to customize the step, use the countup or countdown procedures instead. They each take a start, an end, and a step.<br>
+^ Now we will talk about the strange _ in place of an index variable. In Nim, if you do not want or need to use the index variable in a for ... in loop, you can write an _ for the variable and Nim will not define a variable for it.
+
++ (yes|yeah|ok|got it|i got it|sure|okay|i think so|hope so|i hope so|think so|hopefully|k|done|y)
+% now we will write the main game loop of asking the user for a guess and responding with whether it is too high or too low or correctbrwrite the following code and on the next line start an indented block codefor in 1maxguessescode you may be wondering about this line what do the code1maxguessescode and codefor in code parts mean lets start with the code1maxguessescode part in nim we use the codecode operator to get a range of numbers it gives the inclusive range of integers between two numbers you can also use codeltcode for inclusivelower bound exclusive upper bound or codegtcode for the opposite if you want to customize the step use the countup or countdown procedures instead they each take a start an end and a stepbrnow we will talk about the strange in place of an index variable in nim if you do not want or need to use the index variable in a for in loop you can write an for the variable and nim will not define a variable for it
+- Now within the indented block, write this: <code>var guess: int = getGuess()</code>. This gets the user's guess.
+
++ (yes|yeah|ok|got it|i got it|sure|okay|i think so|hope so|i hope so|think so|hopefully|k|done|y)
+% now we will write the main game loop of asking the user for a guess and responding with whether it is too high or too low or correctbrwrite the following code and on the next line start an indented block codefor in 1maxguessescode you may be wondering about this line what do the code1maxguessescode and codefor in code parts mean lets start with the code1maxguessescode part in nim instead of using the unintuitive range function to generate a range of numbers we use the codecode operator it gives the inclusive range of integers between two numbers you can also use codeltcode for inclusivelower bound exclusive upper bound or codegtcode for the opposite if you want to customize the step use the countup or countdown procedures instead they each take a start an end and a stepbrnow we will talk about the strange in place of an index variable in nim if you do not want or need to use the index variable in a for in loop you can write an for the variable and nim will not define a variable for it
+- Now within the indented block, write this: <code>var guess: int = getGuess()</code>. This gets the user's guess.
+
++ (yes|yeah|ok|got it|i got it|sure|okay|i think so|hope so|i hope so|think so|hopefully|k|done|y)
+% now within the indented block write this codevar guess int getguesscode this gets the users guess
+- Now write this code within the indented block. It should be pretty self explanatory by now.<br>
+^ <pre><code># Check if the guess is too high or too low<br>
+^   if guess > targetNumber:<br>
+^     echo "Too high! Try again."<br>
+^   elif guess < targetNumber:<br>
+^     echo "Too low! Try again."<br>
+^   else:<br>
+^     echo "Good job!"<br>
+^     guessedSuccessfully = true<br>
+^     break</code></pre><br>
+^ The one thing you may notice is the first line, <code># Check if the guess is too high or too low</code> In Nim, you can write comments with <code>#</code>. Multi-line comments are written <code>#[ comment ]#</code>. Multiline comments can even be nested.
+
++ (yes|yeah|ok|got it|i got it|sure|okay|i think so|hope so|i hope so|think so|hopefully|k|done|y)
+% now write this code within the indented block it should be pretty self explanatory by nowbrprecode check if the guess is too high or too lowbrif guess targetnumberbrecho too high try againbrelif guess targetnumberbrecho too low try againbrelsebrecho good jobbrguessedsuccessfully truebrbreakcodeprebrthe one thing you may notice is the first line code check if the guess is too high or too lowcode in nim you can write comments with codecode multiline comments are written code comment code multiline comments can even be nested
+- Now we are almost done. We just have to add a few more lines. End the indented block and add this afterward:<br>
+^ <pre><code>if not guessedSuccessfully:<br>
+^   echo "You ran out of guesses. Better luck next time!"</code></pre><br>
+^ This should be pretty self-explanatory at this point. Note that Nim uses <code>not/and/or</code> instead of <code>!/&&/||</code>.
+
++ (yes|yeah|ok|got it|i got it|sure|okay|i think so|hope so|i hope so|think so|hopefully|k|done|y)
+% now we are almost done we just have to add a few more lines end the indented block and add this afterwardbrprecodeif not guessedsuccessfullybrecho you ran out of guesses better luck next timecodeprebrthis should be pretty selfexplanatory at this point note that nim uses codenotandorcode instead of codecode
+- Now for the last line. Write:<br>
+^ <pre><code>import strformat<br>
+^ echo fmt"The target number was {targetNumber}. Thanks for playing!"</code></pre><br>
+^ First, the <code>strformat</code> module provides the fmt"" strings. These are format strings which are an easy way to dynamically generate strings with variables in them. This is used to tell the player the actual number. This is the end of the learning Nim chatbot. Thanks for chatting!
+
++ (yes|yeah|sure|guess so|i guess so|i guess|definitely|for sure|certainly|most certainly|i would|i certainly would|i most certainly would|why not|y)
 - Cool! What programming language are you coming from? Arduino, Python, or JavaScript?

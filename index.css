@@ -35,6 +35,8 @@ body {
 
 #text-header {
     font-size: 2.5rem;
+    color: #fff;
+    text-decoration: none;
 }
 
 .group-icon, .d-icon {
@@ -91,9 +93,10 @@ body {
 }
 
 .message-content {
-    display: flex;
+    /* display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; */
+    display: block;
     width: auto;
     height: auto;
     border-radius: 25px;
@@ -164,9 +167,14 @@ code {
     color: #f8f8f2;
     border-radius: 0.3em;
     padding: 4px 5px 4px;
-    margin: 0 0.5rem 0;
+    margin: 0 0.25rem 0;
     font-size: 17px;
     display: inline-block;
-    white-space: pre-wrap;
-    word-wrap: break-word;
+    white-space: pre;
+    overflow-x: auto;
+    max-width: calc(52.125rem - 10px - 0.25rem - 20px);
+}
+
+pre {
+    margin: 0.25em 0;
 }
