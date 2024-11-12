@@ -3,7 +3,7 @@
 + no
 - 🙁 thats too bad, come back when u feel like learning nim
 
-+ (k|ok|im back|i am back|okay|yes|yeah|got it|i got it|sure|i think so|hope so|i hope so|think so|hopefully|ready|im ready|im ready now|ok im ready)
++ (k|ok|im back|i am back|okay|yes|yeah|got it|i got it|sure|i think so|hope so|i hope so|think so|hopefully|ready|im ready|im ready now|ok im ready|y)
 % thats too bad come back when u feel like learning nim
 - So you're ready to learn Nim now?
 
@@ -11,12 +11,60 @@
 % so youre ready to learn nim now
 @ yes
 
-+ js
++ *
 % cool what programming language are you coming from arduino python or javascript
+- Sorry, please choose one of the options.
+
++ *
+% sorry please choose one of the options
+- Sorry, please choose one of the options.
+
++ (js|*js|js*|*js*){weight=2}
+% sorry please choose one of the options
 - <set lang=javascript>Cool! Wanna get started?
 
-+ (arduino|python|javascript)
-% cool what programming language are you coming from arduino python or javascript
++ (py|*py|py*|*py*){weight=2}
+% sorry please choose one of the options
+- <set lang=javascript>Cool! Wanna get started?
+
++ *(arduino|python|javascript){weight=2}
+% sorry please choose one of the options
+- <set lang=<star2>> Cool! Wanna get started?
+
++ (arduino|python|javascript)*{weight=2}
+% sorry please choose one of the options
+- <set lang=<star1>> Cool! Wanna get started?
+
++ *(arduino|python|javascript)*{weight=2}
+% sorry please choose one of the options
+- <set lang=<star2>> Cool! Wanna get started?
+
++ (arduino|python|javascript){weight=2}
+% sorry please choose one of the options
+- <set lang=<star1>> Cool! Wanna get started?
+
++ (js|*js|js*|*js*){weight=2}
+% sorry please choose one of the options
+- <set lang=javascript>Cool! Wanna get started?
+
++ (py|*py|py*|*py*){weight=2}
+% sorry please choose one of the options
+- <set lang=javascript>Cool! Wanna get started?
+
++ *(arduino|python|javascript){weight=2}
+% sorry please choose one of the options
+- <set lang=<star2>> Cool! Wanna get started?
+
++ (arduino|python|javascript)*{weight=2}
+% sorry please choose one of the options
+- <set lang=<star1>> Cool! Wanna get started?
+
++ *(arduino|python|javascript)*{weight=2}
+% sorry please choose one of the options
+- <set lang=<star2>> Cool! Wanna get started?
+
++ (arduino|python|javascript){weight=2}
+% sorry please choose one of the options
 - <set lang=<star1>> Cool! Wanna get started?
 
 + (yes|yeah|ok|got it|i got it|sure|okay|i think so|hope so|i hope so|think so|hopefully|k|done|y)
@@ -153,5 +201,5 @@
 ^ echo fmt"The target number was {targetNumber}. Thanks for playing!"</code></pre><br>
 ^ First, the <code>strformat</code> module provides the fmt"" strings. These are format strings which are an easy way to dynamically generate strings with variables in them. This is used to tell the player the actual number. This is the end of the learning Nim chatbot. Thanks for chatting!
 
-+ (yes|yeah|sure|guess so|i guess so|i guess|definitely|for sure|certainly|most certainly|i would|i certainly would|i most certainly would|why not|y)
++ (yes|yeah|sure|guess so|i guess so|i guess|definitely|for sure|certainly|most certainly|i would|i certainly would|i most certainly would|why not|y|k|okay|ok)
 - Cool! What programming language are you coming from? Arduino, Python, or JavaScript?
