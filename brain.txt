@@ -185,17 +185,17 @@
 ^     echo "Good job!"<br>
 ^     guessedSuccessfully = true<br>
 ^     break</code></pre><br>
-^ The one thing you may notice is the first line, <code># Check if the guess is too high or too low</code> In Nim, you can write comments with <code>#</code>. Multi-line comments are written <code>#[ comment ]#</code>. Multiline comments can even be nested.
+^ The one thing you may notice is the first line, <code># Check if the guess is too high or too low</code>. In Nim, you can write comments with <code>#</code>. Multi-line comments are written <code>#[ comment ]#</code>. Multiline comments can even be nested.
 
 + (yes|yeah|ok|got it|i got it|sure|okay|i think so|hope so|i hope so|think so|hopefully|k|done|y)
 % now write this code within the indented block it should be pretty self explanatory by nowbrprecode check if the guess is too high or too lowbrif guess targetnumberbrecho too high try againbrelif guess targetnumberbrecho too low try againbrelsebrecho good jobbrguessedsuccessfully truebrbreakcodeprebrthe one thing you may notice is the first line code check if the guess is too high or too lowcode in nim you can write comments with codecode multiline comments are written code comment code multiline comments can even be nested
 - Now we are almost done. We just have to add a few more lines. End the indented block and add this afterward:<br>
 ^ <pre><code>if not guessedSuccessfully:<br>
 ^   echo "You ran out of guesses. Better luck next time!"</code></pre><br>
-^ This should be pretty self-explanatory at this point. Note that Nim uses <code>not/and/or</code> instead of <code>!/&&/||</code>.
+^ This should be pretty self-explanatory at this point. Note that Nim uses <code>not / and / or</code> instead of <code>! / && / ||</code>.
 
 + (yes|yeah|ok|got it|i got it|sure|okay|i think so|hope so|i hope so|think so|hopefully|k|done|y)
-% now we are almost done we just have to add a few more lines end the indented block and add this afterwardbrprecodeif not guessedsuccessfullybrecho you ran out of guesses better luck next timecodeprebrthis should be pretty selfexplanatory at this point note that nim uses codenotandorcode instead of codecode
+% now we are almost done we just have to add a few more lines end the indented block and add this afterwardbrprecodeif not guessedsuccessfullybrecho you ran out of guesses better luck next timecodeprebrthis should be pretty selfexplanatory at this point note that nim uses codenot and orcode instead of code code
 - Now for the last line. Write:<br>
 ^ <pre><code>import strformat<br>
 ^ echo fmt"The target number was {targetNumber}. Thanks for playing!"</code></pre><br>
